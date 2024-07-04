@@ -1,0 +1,26 @@
+import java.util.Scanner;
+
+public class TrapeziumArea {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Input for base1, base2, and height
+        System.out.print("Enter the length of the first base (base1): ");
+        double base1 = scanner.nextDouble();
+        
+        System.out.print("Enter the length of the second base (base2): ");
+        double base2 = scanner.nextDouble();
+        
+        System.out.print("Enter the height of the trapezium: ");
+        double height = scanner.nextDouble();
+
+        // Calculating the area of the trapezium
+        double area = 0.5 * (base1 + base2) * height;
+
+        // Output the area
+        System.out.println("The area of the trapezium is: " + area);
+        
+        // Close the scanner
+        scanner.close();
+    }
+}
