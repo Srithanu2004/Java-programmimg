@@ -1,0 +1,40 @@
+import java.util.Arrays;
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter the size of the array: ");
+        int n = scanner.nextInt();
+        int[] array = new int[n];
+        System.out.println("Enter the elements of the array: ");
+        for (int i = 0; i < n; i++) {
+            array[i] = scanner.nextInt();
+        }
+        int[] uniqueArray = removeDuplicates(array);
+        System.out.println("Array after removing duplicates: ");
+        for (int i = 0; i < uniqueArray.length; i++) {
+            System.out.print(uniqueArray[i] + " ");
+        }
+    }
+
+    public static int[] removeDuplicates(int[] array) {
+        int[] uniqueArray = new int[array.length];
+        int j = 0;
+        for (int i = 0; i < array.length; i++) {
+            if (!isDuplicate(array, i)) {
+                uniqueArray[j] = array[i];
+j++;
+            }
+        }
+        return Arrays.copyOf(uniqueArray, j);
+    }
+
+    public static boolean isDuplicate(int[] array, int i) {
+        for (int k = 0; k < i; k++) {
+            if (array[i] == array[k]) {
+                return true;
+            }
+        }
+        return false;
+    }
+}
