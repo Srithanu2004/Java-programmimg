@@ -1,0 +1,14 @@
+import java.util.Scanner;
+public class R19222508
+{
+    public static void main(String[]args)
+    {
+        Scanner input=new Scanner(System.in);
+int M=5;
+int N=10;
+for(int i=1;i<=N;i++)
+{
+ System.out.println(i+"x"+M+"="+(i*M));
+}
+}
+}
