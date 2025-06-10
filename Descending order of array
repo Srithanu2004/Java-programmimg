@@ -1,0 +1,18 @@
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        int a[] = {14, 67, 48, 23, 5, 62};
+        int len = a.length;
+        
+        Arrays.sort(a); // First sort in ascending order
+        
+        System.out.println("Descending Order:");
+        // Print in reverse order
+        for (int i = len - 1; i >= 0; i--) {
+            System.out.print(a[i] + " ");
+        }
+    }
+}
