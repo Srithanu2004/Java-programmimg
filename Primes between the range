@@ -1,0 +1,22 @@
+class PrimeNumbers {
+  // Method with parameter and no return type (void)
+    public static void checkPrime(int number) {
+        int count = 0;
+        for (int i = 1; i <= number; i++) {
+            if (number % i == 0) {
+                count++;
+            }
+        }
+        if (count == 2) {
+            System.out.print(number + " ");
+        }
+    }
+
+    public static void main(String[] args) {
+        System.out.println("Prime numbers between 1 and 100 are:");
+        
+        for (int i = 1; i <= 100; i++) {
+            checkPrime(i);
+        }
+    }
+}
